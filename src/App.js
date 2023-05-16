@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import LandingPage from './components/Landing-page';
+import Login from './components/Login';
+import NewPost from './components/New-post';
+import PetCare from './components/Pet-care';
+import Shelter from './components/Shelter';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+        <Route exact path="/" component={LandingPage} />
+        <Route path="/login" component={Login} />
+        <Route path="/new-post" component={NewPost} />
+        <Route path="/pet-care" component={PetCare} />
+        <Route path="/shelter" component={Shelter} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
