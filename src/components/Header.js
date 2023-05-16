@@ -2,14 +2,14 @@ import React from "react";
 import '../App.css'
 import { NavLink } from "react-router-dom";
 
-function Header() {
+export default function Header() {
     return (
-        <header classname="app-header">
+        <header className="app-header">
             <h1>Pet-Connect</h1>
             <nav>
                 <ul>
                     <li>
-                        <NavLink exact to="/" activeClassName="active">
+                        <NavLink exact to="/" activeClassName="active" className='navStyle'>
                             Home
                         </NavLink>
                     </li>
@@ -18,6 +18,8 @@ function Header() {
                             Login
                         </NavLink>
                     </li>
+                </ul>
+                <ul>
                     <li>
                         <NavLink exact to="/PetCare" activeClassName="active">
                             Pet Care
@@ -33,5 +35,3 @@ function Header() {
         </header>
         );
 }
-
-export default Header;

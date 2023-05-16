@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Shelter() {
+export default function Shelter() {
   return (
     <div>
       <h2>Shelter</h2>
@@ -8,5 +8,3 @@ function Shelter() {
     </div>
   );
 }
-
-export default Shelter;
