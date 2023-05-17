@@ -7,10 +7,7 @@ import Login from './components/Login';
 import NewPost from './components/New-post';
 import PetCare from './components/Pet-care';
 import Shelter from './components/Shelter';
-import Donations from './components/Donations';
-
 import './App.css';
-import './index.css'
 
 function App() {
   return (
@@ -18,13 +15,13 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/login" component={Login} />
-        <Route path="/new-post" component={NewPost} />
-        <Route path="/pet-care" component={PetCare} />
-        <Route path="/shelter" component={Shelter} />
-        <Route path="/donations" component={Donations} />
+         <Route path="/" element={<LandingPage />} />
+         <Route path="/login" element={<Login />} />
+         <Route path="/new-post" element={<NewPost />} />
+         <Route path="/pet-care" element={<PetCare />} />
+         <Route path="/shelter" element={<Shelter />} />
         </Routes>
+
         <Footer />
       </div>
     </Router>
