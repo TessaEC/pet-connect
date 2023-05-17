@@ -15,12 +15,13 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/login" component={Login} />
-        <Route path="/new-post" component={NewPost} />
-        <Route path="/pet-care" component={PetCare} />
-        <Route path="/shelter" component={Shelter} />
+         <Route path="/" element={<LandingPage />} />
+         <Route path="/login" element={<Login />} />
+         <Route path="/new-post" element={<NewPost />} />
+         <Route path="/pet-care" element={<PetCare />} />
+         <Route path="/shelter" element={<Shelter />} />
         </Routes>
+
         <Footer />
       </div>
     </Router>

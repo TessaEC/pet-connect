@@ -1,7 +1,8 @@
 import React from 'react';
+import '../App.css';
 import NewPost from './New-post'; // Import the NewPost component
 
-function LandingPage() {
+export default function LandingPage() {
   return (
     <div>
       <h2>Landing Page</h2>
@@ -12,5 +13,3 @@ function LandingPage() {
     </div>
   );
 }
-
-export default LandingPage;
