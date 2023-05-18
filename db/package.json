@@ -1,0 +1,14 @@
+{
+  "name": "pets",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "seed": "node scripts/seedDb.js"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.1.1"
+  }
+}
