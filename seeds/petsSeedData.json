@@ -1,0 +1,21 @@
+[
+    {
+      "type": "dog",
+      "age": 3,
+      "sex": "male",
+      "furColor": "brown"
+    },
+    {
+      "type": "cat",
+      "age": 2,
+      "sex": "female",
+      "furColor": "gray"
+    },
+    {
+      "type": "dog",
+      "age": 5,
+      "sex": "female",
+      "furColor": "black"
+    }
+  ]
+  
