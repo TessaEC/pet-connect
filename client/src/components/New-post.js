@@ -3,7 +3,7 @@ import React from 'react';
 export default function NewPost() {
   return (
     <div>
-      <h2>New Post</h2>
+      <h2>Available Pets</h2>
       <form>
         <div>
           <label htmlFor="title">Title:</label>
