@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import LandingPage from './components/Landing-page';
 import Login from './components/Login';
-import NewPost from './components/New-post';
+import Mission from './components/Mission';
 import PetCare from './components/Pet-care';
 import Shelter from './components/Shelter';
 import './App.css';
@@ -17,7 +17,7 @@ function App() {
         <Routes>
          <Route path="/" element={<LandingPage />} />
          <Route path="/login" element={<Login />} />
-         <Route path="/new-post" element={<NewPost />} />
+         <Route path="/Mission" element={<Mission />} />
          <Route path="/pet-care" element={<PetCare />} />
          <Route path="/shelter" element={<Shelter />} />
         </Routes>
