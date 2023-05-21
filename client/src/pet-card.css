@@ -1,0 +1,31 @@
+.pet-card {
+    width: 200px;
+    height: 300px;
+    perspective: 800px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .pet-card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .pet-card .card-front,
+  .pet-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .pet-card .card-front {
+    background-color: #f9f9f9;
+    /* Front card styles */
+  }
+  
+  .pet-card .card-back {
+    background-color: #e9e9e9;
+    transform: rotateY(180deg);
+    /* Back card styles */
+  }
