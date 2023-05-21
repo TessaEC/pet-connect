@@ -21,7 +21,6 @@ function App() {
          <Route path="/Petcare" element={<PetCare />} />
          <Route path="/shelter" element={<Shelter />} />
         </Routes>
-
         <Footer />
       </div>
     </Router>
