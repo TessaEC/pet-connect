@@ -20,14 +20,19 @@ export default function Header() {
                     </li>
                 </ul>
                 <ul>
-                    <li>
-                        <NavLink exact to="/PetCare" activeClassName="active">
+                <li>
+                        <NavLink exact to="/petcare" activeClassName="active">
                             Pet Care
                         </NavLink>
                     </li>
                     <li>
+                        <NavLink exact to="/availablepets" activeClassName="active">
+                            Available Pets
+                        </NavLink>
+                    </li>
+                    <li>
                         <NavLink exact to="/Shelter" activeClassName="active">
-                            Shelter
+                            Shelters
                         </NavLink>
                     </li>
             
