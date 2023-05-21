@@ -18,11 +18,11 @@ function App() {
         <Routes>
          <Route path="/" element={<LandingPage />} />
          <Route path="/login" element={<Login />} />
+         <Route path="/Petcare" element={<PetCare />} />
          <Route path="/shelter" element={<Shelter />} />
          <Route path='/petcare' element={<PetCare />} />
          <Route path="/availablepets" element={<AvailablePets />} />
         </Routes>
-
         <Footer />
       </div>
     </Router>
