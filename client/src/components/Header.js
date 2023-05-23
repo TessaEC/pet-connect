@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { LOGOUT_USER } from "../utils/mutations";
 
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const [logoutUser] = useMutation(LOGOUT_USER);
 
-  const handleLogout = () => {
-    // Perform logout logic here (e.g., clearing user session)
-    
-    setIsLoggedIn(false);
-    navigate("/login"); // Redirect to login screen after logout
+  const handleLogout = async () => {
+    try {
+      await logoutUser();
+
+      localStorage.removeItem("token");
+      setIsLoggedIn(false);
+      navigate("/login");
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -35,11 +43,13 @@ export default function Header() {
           )}
         </ul>
         <ul>
+          {isLoggedIn ? (
           <li>
-            <NavLink exact to="/petcare" activeClassName="active">
-              Pet Care
+            <NavLink exact to="/dashboard" activeClassName="active">
+              Dashboard
             </NavLink>
           </li>
+          ) : null}
           <li>
             <NavLink exact to="/availablepets" activeClassName="active">
               Available Pets

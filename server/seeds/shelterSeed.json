@@ -1,19 +1,24 @@
 [
     {
-      "shelterName": "Nashville Pet Center",
+      "shelterName": "Nashville Humane Association",
       "city": "Nashville",
       "phone": "6155551234",
       "email": "NPC@gmail.com",
-      "password": "password",
-      "createdPost": ""
+      "password": "password"
+    },
+    {
+      "shelterName": "Catfeine Cat Cafe",
+      "city": "Murfreesboro",
+      "phone": "6789992948",
+      "email": "catfeine@gmail.com",
+      "password": "cats123"
     },
     {
       "shelterName": "Bellevue Humane Society",
       "city": "Bellevue",
       "phone": "6295551234",
       "email": "BellevueHS@gmail.com",
-      "password": "123pets",
-      "createdPost": ""
+      "password": "123pets"
     }
   ]
   

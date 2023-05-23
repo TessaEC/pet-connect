@@ -22,6 +22,7 @@ export const QUERY_SHELTERS = gql`
             _id
             shelterName 
             email
+            password
             city
             phone
             pets {
@@ -34,7 +35,7 @@ export const QUERY_SHELTERS = gql`
                 furColor
                 image
                 status
-            }
+}
         }
 
     }

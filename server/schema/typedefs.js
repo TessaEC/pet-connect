@@ -8,7 +8,7 @@ type Shelter {
     password: String
     shelterName: String
     city: String
-    phone: String
+    phone: Int
     pets: [Pet]
 }
 
@@ -39,7 +39,7 @@ type Query {
 }
 
 type Mutation {
-    addShelter(shelterName: String!, email: String!, password: String!): Auth
+    addShelter(shelterName: String!, email: String!, password: String!, city: String!, phone: Int!): Auth
     login(email: String!, password: String!): Auth
     addPet(petName: String!, type: String!, age: String!, furColor: String!, image: String!, shelterId: ID!): Pet
     removePet(petId: ID!): Pet

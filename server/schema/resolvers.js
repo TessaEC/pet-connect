@@ -9,20 +9,12 @@ const resolvers = {
     },
     pets: async () => {
       return await Pet.find();
-      // const petSeedData = require('../seeds/petSeed');
-      // const shelterSeedData = require('../seeds/shelterSeed');
-    
-      // return {
-      //   pets: petSeedData,
-      //   shelters: shelterSeedData,
-      // };
-    },
-    
+    },  
   },
 
   Mutation: {
-    addShelter: async (parent, { shelterName, email, password }) => {
-      const shelter = await Shelter.create({ shelterName, email, password });
+    addShelter: async (parent, { shelterName, city, phone, email, password }) => {
+      const shelter = await Shelter.create({ shelterName, city, phone, email, password });
       const token = signToken(shelter);
       return { token, shelter };
     },

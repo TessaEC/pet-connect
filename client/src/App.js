@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink, HttpLink } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
 import Footer from './components/Footer';
@@ -9,7 +9,7 @@ import LandingPage from './components/Landing-page';
 import Login from './components/Login';
 import Shelter from './components/Shelter';
 import AvailablePets from './components/Available-pets';
-import PetCare from './components/Pet-care';
+import Dashboard from './components/Dashboard';
 import './App.css';
 
 // Construct our main GraphQL API endpoint
@@ -30,7 +30,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
-  //link: authLink.concat(httpLink), // Chain it with the HttpLink
+  link: authLink.concat(httpLink), // Chain it with the HttpLink
   uri: 'http://localhost:3001/graphql',
   cache: new InMemoryCache(),
 });
@@ -44,10 +44,9 @@ export default function App() {
         <Routes>
          <Route path="/" element={<LandingPage />} />
          <Route path="/login" element={<Login />} />
-         <Route path="/signup" element={<Login />} />
          <Route path="/shelter" element={<Shelter />} />
-         <Route path='/Petcare' element={<PetCare />} />
-         <Route path="/AvailablePets" element={<AvailablePets />} />
+         <Route path='/dashboard' element={<Dashboard />} />
+         <Route path="/availablePets" element={<AvailablePets />} />
         </Routes>
         <Footer />
       </div>

@@ -43,13 +43,16 @@ export const GET_AVAILABLE_PETS = gql`
 `;
 
 export const ADD_SHELTER = gql`
-    mutation AddShelter($name: String!, $email: String!, $password: String!) {
-        addShelter(name: $shelterName, email: $email, password: $password) {
+    mutation AddShelter($shelterName: String!, $email: String!, $password: String!, $city: String!, $phone: Int!) {
+        addShelter(shelterName: $shelterName, email: $email, password: $password, city: $city, phone: $phone) {
             token
             shelter {
                 _id
                 email
                 password
+                shelterName
+                city
+                phone
             }
         }
     }
@@ -102,6 +105,7 @@ export const ADD_PET = gql`
     }
 }
 `;
+
 
 
 
