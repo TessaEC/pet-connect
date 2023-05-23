@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink, HttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
 import Footer from './components/Footer';
@@ -14,7 +14,7 @@ import './App.css';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3000/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -30,7 +30,8 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
-  link: authLink.concat(httpLink), // Chain it with the HttpLink
+  //link: authLink.concat(httpLink), // Chain it with the HttpLink
+  uri: 'http://localhost:3001/graphql',
   cache: new InMemoryCache(),
 });
 

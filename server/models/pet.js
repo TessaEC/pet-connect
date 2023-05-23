@@ -5,6 +5,10 @@ const petSchema = new Schema({
     type: String,
     required: true
   },
+  breed: {
+    type: String,
+    required: false
+  },
   petName: {
     type: String,
     required: true
@@ -21,9 +25,13 @@ const petSchema = new Schema({
     type: String,
     required: true
   },
+  image: {
+    type: String,
+    required: false
+  },
   status: {
     type: String,
-    required: true
+    required: false
   },
 });
 

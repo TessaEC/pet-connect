@@ -22,6 +22,7 @@ type Pet {
     furColor: String
     image: String
     shelter: Shelter
+    status: String
 }
 
 type Auth {
