@@ -5,16 +5,17 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     shelters: async () => {
-      return Shelter.find();
+      return await Shelter.find();
     },
-    availablePets: () => {
-      const petSeedData = require('../seeds/petSeed');
-      const shelterSeedData = require('../seeds/shelterSeed');
+    pets: async () => {
+      return await Pet.find();
+      // const petSeedData = require('../seeds/petSeed');
+      // const shelterSeedData = require('../seeds/shelterSeed');
     
-      return {
-        pets: petSeedData,
-        shelters: shelterSeedData,
-      };
+      // return {
+      //   pets: petSeedData,
+      //   shelters: shelterSeedData,
+      // };
     },
     
   },

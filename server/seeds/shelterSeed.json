@@ -1,10 +1,18 @@
 [
     {
       "shelterName": "Nashville Pet Center",
-      "City": "Nashville",
-      "Phone": "7315551234",
+      "city": "Nashville",
+      "phone": "6155551234",
       "email": "NPC@gmail.com",
       "password": "password",
+      "createdPost": ""
+    },
+    {
+      "shelterName": "Bellevue Humane Society",
+      "city": "Bellevue",
+      "phone": "6295551234",
+      "email": "BellevueHS@gmail.com",
+      "password": "123pets",
       "createdPost": ""
     }
   ]

@@ -2,8 +2,8 @@ import { gql } from '@apollo/client';
 
 export const QUERY_PETS = gql`
     {
-        availablePets {
-            id
+        pets {
+            _id
             petName
             type
             breed
@@ -19,13 +19,13 @@ export const QUERY_PETS = gql`
 export const QUERY_SHELTERS = gql`
     {
         shelters {
-            id
+            _id
             shelterName 
             email
             city
             phone
             pets {
-                id
+                _id
                 petName
                 type
                 breed

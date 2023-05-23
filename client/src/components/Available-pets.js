@@ -14,8 +14,8 @@ export default function AvailablePets() {
   if (error) {
     return <p>Error: {error.message}</p>;
   }
-
-  const petData = data.availablePets;
+console.log(data)
+  const petData = data.pets;
 
   return (
     <div>

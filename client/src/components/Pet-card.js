@@ -5,7 +5,7 @@ import { QUERY_PETS } from "../utils/queries";
 
 export default function PetCard({ pet }) {
   
-  useQuery(QUERY_PETS);
+  //useQuery(QUERY_PETS);
 
   return (
     <div className='pet-card'>
