@@ -1,6 +1,6 @@
 /* App.css */
 body {
-  margin: 0;
+  margin: 2% 30%;
   padding: 0;
   background-color: rgb(63, 63, 68);
   font-family: Arial, sans-serif;
@@ -18,11 +18,18 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  border: double rgba(76, 76, 82, 0.705);
+  box-shadow: inset 0 0 10px rgba(76, 76, 82, 0.705);
+}
+
+.app-header {
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
-  color:rgb(203, 248, 177);
+  color:rgb(115, 172, 236);
+  margin: 10px;
 }
 
 nav {
@@ -32,16 +39,15 @@ nav {
 }
 
 nav a {
-  color: rgb(247, 188, 136);
+  color: rgb(238, 100, 100);
   text-decoration: none;
   transition: background-color 0.6s ease, color 0.3s ease-in-out;
   padding: 10px;
-
 }
 
 nav a:hover {
 background-color: rgb(238, 100, 100);
-color: rgb(247, 247, 247);
+color: rgb(240, 219, 29);
 font-weight: bold;
 border-start-start-radius: 10px;
 }
@@ -56,36 +62,87 @@ ul li {
   padding: 5px;
 }
 
-/* .navStyle {
-  margin: 10px;
-} */
-
-
-/* .header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+ul li:hover{
+  transform: rotate(-1deg);
 }
 
-.header h1 {
-  margin: 0;
+/* Pet card styling */
+
+.pet-card {
+  width: 200px;
+  height: 300px;
+  perspective: 800px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
 }
 
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+.pet-card.flipped {
+  transform: rotateY(180deg);
 }
 
-.footer p {
-  margin: 0;
+.pet-card .card-front,
+.pet-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
-.page-content {
-  padding: 20px;
+.pet-card .card-front {
+  background-color: #f9f9f9;
+  /* Front card styles */
 }
 
-.landing-page {
+.pet-card .card-back {
+  background-color: #e9e9e9;
+  transform: rotateY(180deg);
+  /* Back card styles */
+}
+
+/* footer */
+
+.app-footer {
+    color: rgb(238, 100, 100);
+    text-decoration: none;
+    transition: background-color 0.6s ease, color 0.3s ease-in-out;
+    padding: 10px;
+}
+
+.app-footer:hover {
+  background-color: rgb(238, 100, 100);
+  color: rgb(240, 219, 29);
+  font-weight: bold;
+  border-start-start-radius: 10px;
+}
+
+.footer-style {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Login/Signup Style */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#email,
+#password {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+
+/* .landing-page {
   background-color: #f5f5f5;
   padding: 20px;
 }

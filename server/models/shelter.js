@@ -2,7 +2,7 @@ const {Schema, model} = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const shelterSchema = new Schema({
-  Name: {
+  shelterName: {
     type: String,
     required: true
   },

@@ -6,11 +6,6 @@ const db = require('./config/connection');
 const { typeDefs, resolvers } = require('./schema');
 const { authMiddleware } = require('./utils/auth');
 
-const fs = require('fs');
-
-const petSeedData = require('./seeds/petSeed.js');
-const shelterSeedData = require('./seeds/shelterSeed.js');
-
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
@@ -29,12 +24,6 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-// Define your API endpoints
-app.get('/availablepets', (req, res) => {
-    // Return the seed data
-    res.json(petSeedData && shelterSeedData);
-  });
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
@@ -46,12 +35,10 @@ const startApolloServer = async(typeDefs, resolvers) => {
 }
 
 db.once('open', () => {
+    startApolloServer(typeDefs, resolvers);
     app.listen(PORT, () => {
         console.log(`API server running on port ${PORT}!`);
         console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
     });
 }
 );
-
-//call the async function to start the server
-startApolloServer(typeDefs, resolvers);
