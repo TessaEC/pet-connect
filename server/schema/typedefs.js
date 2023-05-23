@@ -6,7 +6,7 @@ type Shelter {
     _id: ID
     email: String
     password: String
-    name: String
+    shelterName: String
     city: String
     phone: String
     pets: [Pet]
@@ -14,10 +14,12 @@ type Shelter {
 
 type Pet {
     _id: ID
-    name: String
+    petName: String
     type: String
+    breed: String
     age: String
-    description: String
+    sex: String
+    furColor: String
     image: String
     shelter: Shelter
 }
@@ -32,16 +34,15 @@ type Query {
     pets: [Pet]
     shelter(shelterId: ID!): Shelter
     pet(petId: ID!): Pet
-    getPetSeedData: [Pet]
-    getShelterSeedData: [Shelter]
+    availablePets: [Pet]
 }
 
 type Mutation {
-    addShelter(email: String!, password: String!): Auth
+    addShelter(shelterName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addPet(name: String!, type: String!, age: String!, description: String!, image: String!, shelterId: ID!): Pet
+    addPet(petName: String!, type: String!, age: String!, furColor: String!, image: String!, shelterId: ID!): Pet
     removePet(petId: ID!): Pet
-    updatePet(petId: ID!, name: String!, type: String!, age: String!, description: String!, image: String!): Pet
+    updatePet(petId: ID!, petName: String!, type: String!, age: String!, furColor: String!, image: String!): Pet
 }
 
 `;

@@ -1,31 +1,27 @@
-import React, { useState } from "react";
-import '../App.css';
-import '../pet-card.css'
+import React from "react";
+import { useQuery } from "@apollo/client";
 
-const PetCard = ({ pets }) => {
-  const { name, type, breed, age, sex, furColor, status } = pets;
-  const [isFlipped, setIsFlipped] = useState(false);
+import { QUERY_PETS } from "../utils/queries";
 
-  const handleClick = () => {
-    setIsFlipped(!isFlipped);
-  };
+export default function PetCard({ pet }) {
+  
+  useQuery(QUERY_PETS);
 
   return (
-    <div className={`pet-card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
+    <div className='pet-card'>
       <div className="card-front">
-      <p>Status: {status}</p>
-      {/* {will need to add image here } */}
-      <div className="card-back">
-      <h3>{name}</h3>
-        <p>Type: {type}</p>
-        {type === 'dog' ? <p>Breed: {breed}</p> : null}
-        <p>Age: {age}</p>
-        <p>Sex: {sex}</p>
-        <p>Color: {furColor}</p>
-      </div>
+        <p>{pet.status}</p>
+        {/* Add image here using pet.image or any other relevant field */}
+        <div className="card-back">
+          <h3>{pet.petName}</h3>
+          <p>Type: {pet.type}</p>
+          {pet.type === 'dog' ? <p>Breed: {pet.breed}</p> : null}
+          <p>Age: {pet.age}</p>
+          <p>Sex: {pet.sex}</p>
+          <p>Color: {pet.furColor}</p>
+        </div>
       </div>
     </div>
   );
 }
 
-export default PetCard;

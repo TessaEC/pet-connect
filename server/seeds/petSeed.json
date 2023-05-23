@@ -1,0 +1,28 @@
+[
+  {
+    "petName":"Walter",
+    "type": "dog",
+    "breed":"Lab",
+    "age": 3,
+    "sex": "male",
+    "furColor": "brown",
+    "status": "available"
+  },
+  {
+    "petName":"Mr.Bigglesworth",
+    "type": "cat",
+    "age": 2,
+    "sex": "male",
+    "furColor": "gray",
+    "status": "pending"
+  },
+  {
+    "petName":"Sophie",
+    "type": "dog",
+    "breed":"poodle",
+    "age": 5,
+    "sex": "female",
+    "furColor": "black",
+    "status": "available"
+  }
+]
