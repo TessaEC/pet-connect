@@ -47,11 +47,11 @@ export default function Login() {
 
         const { data } = await addShelter({
           variables: {
-            email,
-            password,
-            shelterName,
-            city,
-            phone,
+            shelterName: shelterName,
+            email: email,
+            password: password,
+            city: city,
+            phone: phone,
           },
         });
 

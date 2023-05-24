@@ -6,7 +6,8 @@
     "age": 3,
     "sex": "male",
     "furColor": "brown",
-    "status": "available"
+    "status": "available",
+    "shelterName": "test-shelter"
   },
   {
     "petName":"Mr.Bigglesworth",

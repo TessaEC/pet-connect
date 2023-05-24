@@ -19,7 +19,7 @@ const petSchema = new Schema({
   },
   sex: {
     type: String,
-    required: true
+    required: false
   },
   furColor: {
     type: String,
