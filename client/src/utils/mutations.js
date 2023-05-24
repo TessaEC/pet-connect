@@ -38,12 +38,13 @@ export const GET_AVAILABLE_PETS = gql`
             furColor
             image
             status
+            shelterName
         }
     }
 `;
 
 export const ADD_SHELTER = gql`
-    mutation AddShelter($shelterName: String!, $email: String!, $password: String!, $city: String!, $phone: Int!) {
+    mutation AddShelter($shelterName: String!, $email: String!, $password: String!, $city: String!, $phone: String!) {
         addShelter(shelterName: $shelterName, email: $email, password: $password, city: $city, phone: $phone) {
             token
             shelter {
@@ -70,8 +71,8 @@ export const UPDATE_PET = gql`
             furColor
             image
             status
+        }
     }
-}
 `;
 
 export const REMOVE_PET = gql`
@@ -86,15 +87,15 @@ export const REMOVE_PET = gql`
             furColor
             image
             status
+        }
     }
-}
 `;
 
 export const ADD_PET = gql`
-    mutation AddPet($petName: String!, $type: String!, $breed: String!, $age: String!, $sex: String!, $furColor: String!, $image: String!, $shelterId: ID!) {
-        AddPet(petName: $petName, type: $type, breed: $breed, age: $age, sex: $sex, furColor: $furColor, image: $image, shelterId: $shelterId) {
+    mutation AddPet($petName: String!, $type: String!, $breed: String!, $age: String!, $sex: String!, $furColor: String!, $image: String!, $shelterName: String!) {
+        addPet(petName: $petName, type: $type, breed: $breed, age: $age, sex: $sex, furColor: $furColor, image: $image, shelterName: $shelterName) {
             _id
-           petName
+            petName
             type
             breed
             age
@@ -102,8 +103,8 @@ export const ADD_PET = gql`
             furColor
             image
             status
+        }
     }
-}
 `;
 
 
