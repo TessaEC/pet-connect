@@ -1,5 +1,5 @@
 const {Schema, model} = require('mongoose');
-const {shelterSchema} = require('./shelter.js')
+const {shelterSchema} = require('./shelter.js');
 
 
 

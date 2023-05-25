@@ -1,9 +1,13 @@
 /* App.css */
 body {
-  margin: 2% 30%;
+  margin: 2% 5%;
   padding: 0;
   background-color: rgb(63, 63, 68);
   font-family: Arial, sans-serif;
+  background-image: url(./asssets/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .App {
@@ -33,8 +37,7 @@ h1 {
 }
 
 nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 10px;
 }
 
@@ -66,7 +69,7 @@ ul li:hover{
   transform: rotate(-1deg);
 }
 
-/* Pet card styling */
+/* Pet card styling
 
 .pet-card {
   width: 200px;
@@ -92,24 +95,20 @@ ul li:hover{
 .pet-card .card-front {
   background-color: #f9f9f9;
   /* Front card styles */
-}
+ */
 
-.pet-card .card-back {
+/* .pet-card .card-back {
   background-color: #e9e9e9;
   transform: rotateY(180deg);
-  /* Back card styles */
-}
+} */
 
 /* footer */
 
-.app-footer {
-    color: rgb(238, 100, 100);
-    text-decoration: none;
-    transition: background-color 0.6s ease, color 0.3s ease-in-out;
-    padding: 10px;
-}
+/*.app-footer {
+  
+}*/
 
-.app-footer:hover {
+.footer-style:hover {
   background-color: rgb(238, 100, 100);
   color: rgb(240, 219, 29);
   font-weight: bold;
@@ -119,6 +118,12 @@ ul li:hover{
 .footer-style {
   color: inherit;
   text-decoration: none;
+  justify-content: center;
+  color: rgb(238, 100, 100);
+  text-decoration: none;
+  transition: background-color 0.6s ease, color 0.3s ease-in-out;
+  padding: 10px;
+  display: inline-block;
 }
 
 /* Login/Signup Style */
@@ -127,6 +132,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 50px;
 }
 input {
   display: flex;
@@ -146,26 +152,40 @@ input {
 
 .pet-card {
 display: flex;
+justify-content: center;
 margin: 20px;
 }
 
-/* .landing-page {
+.header-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+.landing-page {
   background-color: #f5f5f5;
   padding: 20px;
+  
 }
-
-.login-form {
-  max-width: 400px;
+.bg-card {
+  background-color: #e9e9e9;
+  padding: 50px;
+  text-align: center;
+  width: 75%;
   margin: 0 auto;
 }
 
-.login-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+.login-card{
+  margin-top: 50px;
 }
 
-.button {
+.shelter-card{
+  margin-top: 50px;
+}
+
+
+/* .button {
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
@@ -176,3 +196,10 @@ margin: 20px;
 .button:hover {
   background-color: #555;
 } */
+
+
+
+
+
+
+

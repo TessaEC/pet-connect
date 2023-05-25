@@ -3,7 +3,7 @@ import '../App.css';
 
 export default function LandingPage() {
   return (
-    <div>
+    <div className='bg-card'>
       <h2>Welcome to Pet-Connect!</h2>
       <p>Just two struggling Web Developers trying to help pets find their Fur-ever Home!</p>
       <p>Our mission is to create a pet adoption website that serves as a centralized platform for 
