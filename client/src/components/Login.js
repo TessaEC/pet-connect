@@ -82,7 +82,7 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className='login-card'>
       <h2>{isSigningUp ? 'Sign Up' : 'Login'}</h2>
       <form onSubmit={handleSubmit}>
         <div>

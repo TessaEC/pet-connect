@@ -41,7 +41,7 @@ export default function Header() {
               </NavLink>
             </li>
           )}
-        </ul>
+        </ul >
         <ul>
           {isLoggedIn ? (
           <li>
