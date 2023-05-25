@@ -1,4 +1,4 @@
 const Pet = require('./pet');
-const Shelter = require('./shelter');
+const {default: Shelter} = require('./shelter');
 
 module.exports = { Pet, Shelter };

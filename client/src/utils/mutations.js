@@ -26,22 +26,22 @@ export const LOGOUT_USER = gql`
     }
 `;
 
-export const GET_AVAILABLE_PETS = gql`
-    query GetAvailablePets {
-        availablePets {
-            id
-            petName
-            type
-            breed
-            age
-            sex
-            furColor
-            image
-            status
-            shelterName
-        }
-    }
-`;
+// export const GET_AVAILABLE_PETS = gql`
+//     query GetAvailablePets {
+//         availablePets {
+//             id
+//             petName
+//             type
+//             breed
+//             age
+//             sex
+//             furColor
+//             image
+//             status
+//             shelterName
+//         }
+//     }
+// `;
 
 export const ADD_SHELTER = gql`
     mutation AddShelter($shelterName: String!, $email: String!, $password: String!, $city: String!, $phone: String!) {
@@ -59,21 +59,21 @@ export const ADD_SHELTER = gql`
     }
 `;
 
-export const UPDATE_PET = gql`
-    mutation UpdatePet($petId: ID!) {
-        updatePet(petId: $petId) {
-            _id
-            petName
-            type
-            breed
-            age
-            sex
-            furColor
-            image
-            status
-        }
-    }
-`;
+// export const UPDATE_PET = gql`
+//     mutation UpdatePet($petId: ID!) {
+//         updatePet(petId: $petId) {
+//             _id
+//             petName
+//             type
+//             breed
+//             age
+//             sex
+//             furColor
+//             image
+//             status
+//         }
+//     }
+// `;
 
 export const REMOVE_PET = gql`
     mutation RemovePet($petId: ID!) {
@@ -92,7 +92,7 @@ export const REMOVE_PET = gql`
 `;
 
 export const ADD_PET = gql`
-    mutation AddPet($petName: String!, $type: String!, $breed: String!, $age: String!, $sex: String!, $furColor: String!, $image: String!, $shelterName: String!) {
+    mutation AddPet($petName: String!, $type: String!, $breed: String!, $age: String!, $sex: String!, $furColor: String!, $image: String, $shelterName: String) {
         addPet(petName: $petName, type: $type, breed: $breed, age: $age, sex: $sex, furColor: $furColor, image: $image, shelterName: $shelterName) {
             _id
             petName
@@ -102,7 +102,9 @@ export const ADD_PET = gql`
             sex
             furColor
             image
-            status
+            shelter {
+                shelterName
+            }
         }
     }
 `;

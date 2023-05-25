@@ -44,4 +44,9 @@ shelterSchema.methods.isCorrectPassword = async function (password) {
 
 const Shelter = model('Shelter', shelterSchema);
 
-module.exports = Shelter;
+//module.exports = Shelter;
+
+module.exports = {
+  default: Shelter,
+  shelterSchema
+}

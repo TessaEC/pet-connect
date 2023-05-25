@@ -12,6 +12,9 @@ export const QUERY_PETS = gql`
             furColor
             image
             status
+            shelter {
+                shelterName
+            }
     }
 }
 `;

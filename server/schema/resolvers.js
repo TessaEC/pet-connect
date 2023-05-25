@@ -30,10 +30,10 @@ const resolvers = {
       const token = signToken(shelter);
       return { token, shelter };
     },
-    addPet: async (parent, { petName, type, age, breed, sex, furColor, image, status, shelterId }) => {
-      const pet = await Pet.create({ petName, type, age, breed, sex, furColor, image, status });
+    addPet: async (parent, { petName, type, age, breed, sex, furColor, image, shelterName }) => {
+      const pet = await Pet.create({ petName, type, age, breed, sex, furColor, image, shelterName });
       await Shelter.findOneAndUpdate(
-        { _id: shelterId },
+        { shelterName: shelterName },
         { $addToSet: { pets: pet._id } }
       );
       return pet;

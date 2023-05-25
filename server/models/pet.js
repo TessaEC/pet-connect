@@ -1,4 +1,7 @@
 const {Schema, model} = require('mongoose');
+const {shelterSchema} = require('./shelter.js')
+
+
 
 const petSchema = new Schema({
   type: {
@@ -33,6 +36,7 @@ const petSchema = new Schema({
     type: String,
     required: false
   },
+  shelter: shelterSchema
 });
 
 const Pet = model('Pet', petSchema);
