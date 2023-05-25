@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/TessaEC/pet-connect/issues"
   },
-  "homepage": "https://github.com/TessaEC/pet-connect"
+  "homepage": "https://github.com/TessaEC/pet-connect",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
 }
