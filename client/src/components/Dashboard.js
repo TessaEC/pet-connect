@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { useNavigate } from 'react-router-dom';
 import { ADD_PET } from '../utils/mutations'; // Import the ADD_PET mutation from your mutations file
 
 const Dashboard = () => {
@@ -11,11 +12,12 @@ const Dashboard = () => {
     sex: '',
     furColor: '',
     //image: '',
-    status: '',
     shelterName: ''
   });
 
+
   const [addPet] = useMutation(ADD_PET);
+  const navigate = useNavigate()
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -37,9 +39,9 @@ const Dashboard = () => {
           sex: '',
           furColor: '',
           //image: '',
-          status: '',
           shelterName: ''
         });
+        navigate("/availablepets")
       })
       .catch((error) => {
         // Handle error
@@ -75,13 +77,9 @@ const Dashboard = () => {
           Fur Color:
           <input type="text" name="furColor" value={petData.furColor} onChange={handleInputChange} />
         </label>
-        {/* <label>
-          Image:
-          <input type="text" name="image" value={petData.image} onChange={handleInputChange} />
-        </label> */}
         <label>
-          Status:
-          <input type="text" name="status" value={petData.status} onChange={handleInputChange} />
+          Image: (please provide IMGUR link)
+          <input type="text" name="image" value={petData.image} onChange={handleInputChange} />
         </label>
         <label>
           Shelter Name:

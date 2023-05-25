@@ -7,7 +7,8 @@
     "sex": "male",
     "furColor": "brown",
     "status": "available",
-    "shelterName": "test-shelter"
+    "shelterName": "test-shelter",
+    "image": "https://i.imgur.com/06uVGWu.jpeg"
   },
   {
     "petName":"Mr.Bigglesworth",
@@ -15,7 +16,9 @@
     "age": 2,
     "sex": "male",
     "furColor": "gray",
-    "status": "pending"
+    "status": "pending",
+    "shelterName": "test-shelter",
+    "image": "https://i.imgur.com/1NAAwfQ.jpeg"
   },
   {
     "petName":"Sophie",
@@ -24,6 +27,8 @@
     "age": 5,
     "sex": "female",
     "furColor": "black",
-    "status": "available"
+    "status": "available",
+    "shelterName": "test-shelter",
+    "image": "https://i.imgur.com/ywycUVI.jpeg"
   }
 ]
