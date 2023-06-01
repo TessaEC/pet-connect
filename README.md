@@ -27,14 +27,3 @@ Enhanced functionality for uploading and managing pet images directly within the
 Expansion of shelter information for each pet, including detailed profiles and contact information.
 Addition of more information and features on the shelter page, such as reviews, ratings, and adoption success stories.
 We are continuously working on improving Pet Connect and making it a comprehensive platform for pet adoption.
-
-Contributing
-We welcome contributions from the community to help us improve Pet Connect and achieve our mission of finding loving homes for pets in need. If you're interested in contributing, please refer to the CONTRIBUTING.md file for guidelines.
-
-License
-This project is licensed under the MIT License.
-
-vbnet
-Copy code
-
-Feel free to modify and customize the `README.md` file according to your specific project requirements and structure.
